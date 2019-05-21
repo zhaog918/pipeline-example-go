@@ -15,9 +15,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example-helloserver:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
       registry: 192.168.99.10
-      Mirror: https://vk7xybrx.mirror.aliyuncs.com
 - name: Deploy
   steps:
   - applyYamlConfig:
