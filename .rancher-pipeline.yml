@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: 192.168.99.10/library/golang:1.11
+      image: golang:latest
       shellScript: |-
         mkdir -p /go/src/github.com/rancher
         ln -s `pwd` /go/src/github.com/rancher/pipeline-example-go
