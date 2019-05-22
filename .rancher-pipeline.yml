@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: golang:latest
+      image: golang:1.11
       shellScript: |-
         mkdir -p /go/src/github.com/rancher
         ln -s `pwd` /go/src/github.com/rancher/pipeline-example-go
@@ -15,7 +15,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example-helloserver:${CICD_EXECUTION_SEQUENCE}
-      registry: 192.168.99.10
     env:
       MIRROR: https://vk7xybrx.mirror.aliyuncs.com
 - name: Deploy
