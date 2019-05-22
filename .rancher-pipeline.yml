@@ -14,7 +14,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: dev/example-helloserver:${CICD_EXECUTION_SEQUENCE}
+      tag: 192.168.99.10/dev/example-helloserver:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: 192.168.99.10
     env:
